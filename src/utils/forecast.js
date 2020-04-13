@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if(latitude== undefined || longitude == undefined){
             callback("Coordinate error")
         } else{
-            callback( undefined, "The weather in " + response.body.location.name + " is " + response.body.current.weather_descriptions)
+            callback( undefined, "The weather in " + response.body.location.name + " is " + response.body.current.weather_descriptions + ". It is " + response.body.current.temperature + " degrees.")
         }
     })
     
